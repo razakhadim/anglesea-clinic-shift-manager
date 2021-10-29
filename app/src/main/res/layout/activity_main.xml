@@ -8,7 +8,8 @@
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
-    tools:openDrawer="start">
+
+    >
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,13 +18,25 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tool_bar"
-            app:title="Angelsea"
+            app:title=" "
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             android:elevation="4dp"
             android:background="#000000"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"

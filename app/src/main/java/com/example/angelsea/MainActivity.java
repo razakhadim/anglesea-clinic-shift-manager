@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (menuItem.getItemId()){
             case R.id.profile:
+
             case R.id.history:
             case R.id.help:
 

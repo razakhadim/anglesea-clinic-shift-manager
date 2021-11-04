@@ -58,9 +58,9 @@ public class HelpPage extends AppCompatActivity implements NavigationView.OnNavi
             }
         });
 
-        MediaController mediaController = new MediaController(this);
+        /*MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
+        mediaController.setAnchorView(videoView);*/
 
 
 

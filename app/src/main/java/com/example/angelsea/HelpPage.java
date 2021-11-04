@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,7 +23,7 @@ public class HelpPage extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_page);
-        VideoView videoView = findViewById(R.id.videoView);
+        final VideoView videoView = findViewById(R.id.videoView);
         String videoPath = "android.resource://"+getPackageName()+"/"+R.raw.video;
 
 
@@ -44,9 +45,22 @@ public class HelpPage extends AppCompatActivity implements NavigationView.OnNavi
         Uri uri = Uri.parse(videoPath);
         videoView.setVideoURI(uri);
 
-        MediaController mediaController = new MediaController(this);
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                mediaPlayer.start();
+                mediaPlayer.setLooping(true);
+            }
+        });
+
+        /*MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
-        mediaController.setAnchorView(videoView);
+        mediaController.setAnchorView(videoView);*/
 
 
 

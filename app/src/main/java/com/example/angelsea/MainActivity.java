@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.profile:
             case R.id.history:
             case R.id.help:
-                Intent in = new Intent(this,HelpPage.class);
-                startActivity(in);
+                Intent in2 = new Intent(this,HelpPage.class);
+                startActivity(in2);
 
         }
         drawer.closeDrawer(GravityCompat.START);

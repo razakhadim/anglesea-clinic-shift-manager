@@ -2,18 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="83dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:gravity="bottom"
     android:background="@color/themeColor">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu"
+        android:text="@string/menu"
+        android:gravity="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        android:paddingLeft="10dp"
-        android:gravity="start"/>
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="2dp"

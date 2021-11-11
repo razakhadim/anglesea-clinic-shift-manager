@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (menuItem.getItemId()){
             case R.id.profile:
+                break;
             case R.id.history:
+                break;
             case R.id.help:
-                Intent in2 = new Intent(this,HelpPage.class);
-                startActivity(in2);
+                break;
 
         }
         drawer.closeDrawer(GravityCompat.START);

@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.history:
                 break;
             case R.id.help:
+                Intent in =new Intent(this,HelpPage.class);
+                startActivity(in);
                 break;
 
         }
